@@ -73,7 +73,7 @@ include __DIR__ . '/cibo.php';
         return $this -> sconto;
     }
 }
-$clienteUno= new Cliente('crocchette', 'alimentare',50,'pollo e verdure','bio','Giorgio','de Giorgi',true,'mastercard',05/2023);
+$clienteUno= new Cliente('crocchette', 'alimentare', 50 ,'pollo e verdure','bio','Giorgio','de Giorgi',true,'mastercard',05/2023);
 $clienteUno -> setSconto($clienteUno -> iscritto);
 echo "<p>"."acquistato da:"." ".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
 echo "<p>".$clienteUno->getSconto()."</p>";
