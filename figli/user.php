@@ -64,7 +64,7 @@ include __DIR__ . '/cibo.php';
     }
     public function setSconto($iscritto){
         if($iscritto == true){
-           $this-> sconto = "hai uno sconto del 20%";
+           $this-> sconto = "hai uno sconto del 20% in quanto registrato";
         } else {
             $this-> sconto  = null;
         }
@@ -75,8 +75,7 @@ include __DIR__ . '/cibo.php';
 }
 $clienteUno= new Cliente('crocchette', 'alimentare',50,'pollo e verdure','bio','Giorgio','de Giorgi',true,'mastercard',05/2023);
 $clienteUno -> setSconto($clienteUno -> iscritto);
-echo "<p>".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
+echo "<p>"."acquistato da:"." ".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
 echo "<p>".$clienteUno->getSconto()."</p>";
-echo "<p>".$clienteUno-> genere."</p>";
 echo "<p>".'pagamento con:'." ".$clienteUno-> carta."</p>";
 ?>
