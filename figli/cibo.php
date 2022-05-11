@@ -5,16 +5,18 @@ class Crocchette extends Prodotto {
     public $ingredienti;
     public $tipologia;
 
-    public function __costruct(
+    public function __construct(
         $_nome, 
         $_genere,
         $_prezzo,
         $_ingredienti,
         $_tipologia
     ){
-        parent::__costruct($_nome, $_genere, $_prezzo);
-        $this -> getIngredienti();
-        $this -> getTipologia();
+        $this -> setNome($_nome);
+        $this -> setGenere($_genere);
+        $this -> setPrezzo($_prezzo);
+        $this -> setIngredienti($_ingredienti);
+        $this -> setTipologia($_tipologia);
 
     }
 
@@ -25,10 +27,6 @@ class Crocchette extends Prodotto {
         return $this;
     }
 
-    public function getIngredienti()
-    {
-        return $this->ingredienti;
-    }
 
     public function setTipologia($_tipologia)
     {
@@ -36,12 +34,8 @@ class Crocchette extends Prodotto {
 
         return $this;
     }
-
-    public function getTipologia()
-    {
-        return $this->tipologia;
-    }    
+   
 }
 $monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
-echo  $monge ->$getNome();
+echo  $monge -> nome;
 ?>
