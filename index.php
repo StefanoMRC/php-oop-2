@@ -14,7 +14,7 @@ class Prodotto{
     public $nome;
     public $genere;
     public $prezzo;
-
+    
     public function __construct($_nome, $_genere,$_prezzo){
         $this -> setNome($_nome);
         $this -> setGenere($_genere);
