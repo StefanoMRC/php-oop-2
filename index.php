@@ -7,6 +7,8 @@ BONUS:
 Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibili solo in un periodo particolare (es. da maggio ad agosto). -->
 
 <?php
+include __DIR__ . '/figli/cibo.php';
+
 class Prodotto{
     public $nome;
     public $genere;
@@ -31,9 +33,6 @@ class Prodotto{
     {
         return $this->nome;
     }
-
-
-
     public function setGenere($_genere)
     {
         $this->genere = $_genere;
@@ -59,4 +58,4 @@ class Prodotto{
         return $this->prezzo;
     }
 }
->
+?>
