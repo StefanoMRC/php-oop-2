@@ -37,5 +37,9 @@ class Crocchette extends Prodotto {
    
 }
 $monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
-echo  $monge -> nome;
+echo "<p>". $monge -> nome."</p>";
+echo "<p>". $monge -> genere."</p>";
+echo "<p>". $monge -> prezzo."</p>";
+echo "<p>". $monge -> ingredienti."</p>";
+echo "<p>". $monge -> tipologia."</p>";
 ?>

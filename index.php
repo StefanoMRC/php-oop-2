@@ -48,10 +48,6 @@ class Prodotto{
         return $this;
     }    
     
-    public function getPrezzo()
-    {
-        return $this->prezzo;
-    }
+   
    
 }
-?>
