@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../index.php';
+
 class Crocchette extends Prodotto {
     
     public $ingredienti;
@@ -36,10 +36,10 @@ class Crocchette extends Prodotto {
     }
    
 }
-$monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
-echo "<p>".'prodotto:'. $monge -> nome."</p>";
-echo "<p>".'genere:'. $monge -> genere."</p>";
-echo "<p>".'prezzo:'. $monge -> prezzo."</p>";
-echo "<p>".'ingredienti:'. $monge -> ingredienti."</p>";
-echo "<p>".'bio/no bio'. $monge -> tipologia."</p>";
+// $monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
+// echo "<p>".'prodotto:'. $monge -> nome."</p>";
+// echo "<p>".'genere:'. $monge -> genere."</p>";
+// echo "<p>".'prezzo:'. $monge -> prezzo."</p>";
+// echo "<p>".'ingredienti:'. $monge -> ingredienti."</p>";
+// echo "<p>".'bio/no bio'. $monge -> tipologia."</p>";
 ?>

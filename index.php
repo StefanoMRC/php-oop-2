@@ -7,47 +7,20 @@ BONUS:
 Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibili solo in un periodo particolare (es. da maggio ad agosto). -->
 
 <?php
+require __DIR__ . '/figli/prodotto.php';
+require __DIR__ . '/figli/cibo.php';
+require __DIR__ . '/figli/user.php';
 
+$monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
+echo "<p>".'prodotto:'. $monge -> nome."</p>";
+echo "<p>".'genere:'. $monge -> genere."</p>";
+echo "<p>".'prezzo:'. $monge -> prezzo."</p>";
+echo "<p>".'ingredienti:'. $monge -> ingredienti."</p>";
+echo "<p>".'bio/no bio'. $monge -> tipologia."</p>";
 
-
-class Prodotto{
-    public $nome;
-    public $genere;
-    public $prezzo;
-    
-    public function __construct($_nome, $_genere,$_prezzo){
-        $this -> setNome($_nome);
-        $this -> setGenere($_genere);
-        $this -> setPrezzo($_prezzo);
-
-
-    }
-
-    public function setNome($_nome)
-    {
-        $this->nome = $_nome;
-
-        return $this;
-    }
-    
-    
-    public function setGenere($_genere)
-    {
-        $this->genere = $_genere;
-
-        return $this;
-    }
-    
-  
-
-
-    public function setPrezzo($_prezzo)
-    {
-        $this->prezzo = $_prezzo;
-
-        return $this;
-    }    
-    
-   
-   
-}
+$clienteUno= new Cliente('crocchette', 'alimentare', 50 ,'pollo e verdure','bio','Giorgio','de Giorgi',true,'mastercard',05/2023);
+$clienteUno -> setSconto($clienteUno -> iscritto);
+echo "<p>"."acquistato da:"." ".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
+echo "<p>".$clienteUno->getSconto()."</p>";
+echo "<p>".'pagamento con:'." ".$clienteUno-> carta."</p>";
+?>
