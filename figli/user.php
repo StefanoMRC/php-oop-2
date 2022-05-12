@@ -66,7 +66,7 @@
         if($iscritto == true){
            $this-> sconto = "hai uno sconto del 20% in quanto registrato";
         } else {
-            $this-> sconto  = null;
+            $this-> sconto  = 'registrati per avere uno sconto del 20%';
         }
     }
     public function getSconto(){
