@@ -1,9 +1,12 @@
 <?php
 
+
+
 class Prodotto{
     public $nome;
     public $genere;
     public $prezzo;
+    
     
     public function __construct($_nome, $_genere,$_prezzo){
         $this -> setNome($_nome);
@@ -34,11 +37,11 @@ class Prodotto{
     public function setPrezzo($_prezzo)
     {
         $this->prezzo = $_prezzo;
-
+        if (is_string($this->prezzo)) {
+            throw new Exception("il prezzo non è un numero");}
         return $this;
     }    
     
    
    
 }
-?>

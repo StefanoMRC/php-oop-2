@@ -1,6 +1,7 @@
 <?php
-
-    class Cliente extends Crocchette {
+    
+    class Cliente {
+        
     public $nomeUtente;
     public $cognome;
     public $iscritto;
@@ -8,11 +9,6 @@
     public $scadenzaCarta;
     public $sconto;
     public function __construct(
-        $_nome, 
-        $_genere,
-        $_prezzo,
-        $_ingredienti,
-        $_tipologia,
         $_nomeUtente,
         $_cognome,
         $_iscritto,
@@ -20,11 +16,7 @@
         $_scadenzaCarta
         
     ){
-        $this -> setNome($_nome);
-        $this -> setGenere($_genere);
-        $this -> setPrezzo($_prezzo);
-        $this -> setIngredienti($_ingredienti);
-        $this -> setTipologia($_tipologia);
+
         $this -> setNomeUtente($_nomeUtente);
         $this -> setCognome($_cognome);
         $this -> setIscritto($_iscritto);
@@ -65,8 +57,10 @@
     public function setSconto($iscritto){
         if($iscritto == true){
            $this-> sconto = "hai uno sconto del 20% in quanto registrato";
+           
         } else {
             $this-> sconto  = 'registrati per avere uno sconto del 20%';
+           
         }
     }
     public function getSconto(){

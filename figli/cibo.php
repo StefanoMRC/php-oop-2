@@ -1,7 +1,7 @@
 <?php
-
+require __DIR__ . '/sconto.php';
 class Crocchette extends Prodotto {
-    
+    use Sconto;
     public $ingredienti;
     public $tipologia;
 
@@ -34,6 +34,7 @@ class Crocchette extends Prodotto {
 
         return $this;
     }
+    
    
 }
 // $monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio' );
