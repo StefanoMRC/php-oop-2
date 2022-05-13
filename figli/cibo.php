@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/sconto.php';
+require __DIR__ . '/../traits/sconto.php';
 class Crocchette extends Prodotto {
     use Sconto;
     public $ingredienti;

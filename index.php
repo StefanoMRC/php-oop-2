@@ -12,7 +12,7 @@ require __DIR__ . '/figli/cibo.php';
 require __DIR__ . '/figli/user.php';
 
 $clienteUno= new Cliente('Giorgio','de Giorgi',true,'mastercard',05.2023);
-//  $clienteUno -> setSconto($clienteUno -> iscritto);
+$clienteUno -> setSconto($clienteUno -> iscritto);
  echo "<p>"."acquisto:"." ".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
  echo "<p>".$clienteUno->getSconto()."</p>";
  echo "<p>".'pagamento con:'." ".$clienteUno-> carta."</p>";
@@ -27,6 +27,7 @@ echo "<p>".'prezzo:'. $monge -> prezzo."</p>";
 echo "<p>".'ingredienti:'. $monge -> ingredienti."</p>";
 echo "<p>".'bio/no bio:'.' '. $monge -> tipologia."</p>";
 var_dump($monge);
+var_dump($clienteUno);
 
 
 ?>
