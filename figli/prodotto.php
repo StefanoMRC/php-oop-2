@@ -1,7 +1,4 @@
 <?php
-
-
-
 class Prodotto{
     public $nome;
     public $genere;

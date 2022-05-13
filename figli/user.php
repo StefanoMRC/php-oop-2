@@ -5,23 +5,16 @@
     public $nomeUtente;
     public $cognome;
     public $iscritto;
-    public $carta;
-    public $scadenzaCarta;
     public $sconto;
     public function __construct(
         $_nomeUtente,
         $_cognome,
-        $_iscritto,
-        $_carta,
-        $_scadenzaCarta
-        
-    ){
+        $_iscritto){
 
         $this -> setNomeUtente($_nomeUtente);
         $this -> setCognome($_cognome);
         $this -> setIscritto($_iscritto);
-        $this -> setCarta($_carta);
-        $this -> setScadenzaCarta($_scadenzaCarta);
+
     }
 
 
@@ -43,17 +36,7 @@
         return $this;
     }
 
-    public function setCarta($_carta)
-    {
-        $this->carta = $_carta;
-        return $this;
-    }
 
-    public function setScadenzaCarta($_scadenzaCarta)
-    {
-        $this->scadenzaCarta = $_scadenzaCarta;
-        return $this;
-    }
     public function setSconto($iscritto){
         if($iscritto == true){
            $this-> sconto = "hai uno sconto del 20% in quanto registrato";
