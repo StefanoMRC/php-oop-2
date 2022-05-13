@@ -1,10 +1,23 @@
 <?php
-trait Carta{
+class Carta{
     public $tipoCarta;
     public $numeroCarta;
     public $meseScadenza;
     public $annoScadenza;
 
+    public function __construct(
+        $_tipoCarta,
+        $_numeroCarta,
+        $_meseScadenza,
+        $_annoScadenza
+        ){
+
+        $this -> setTipoCarta($_tipoCarta);
+        $this -> setNumeroCarta($_numeroCarta);
+        $this -> setMeseScadenza($_meseScadenza);
+        $this -> setAnnoScadenza($_annoScadenza);
+
+    }
      public function setTipoCarta($_tipoCarta)
      {
          $this->tipoCarta = $_tipoCarta;

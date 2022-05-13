@@ -10,11 +10,17 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 require __DIR__ . '/figli/prodotto.php';
 require __DIR__ . '/figli/cibo.php';
 require __DIR__ . '/figli/user.php';
+require __DIR__ . '/figli/carta.php';
 
 $clienteUno= new Cliente('Giorgio','de Giorgi',true);
 //  $clienteUno -> setSconto($clienteUno -> iscritto);
  echo "<p>"."acquisto:"." ".$clienteUno-> nomeUtente." ".$clienteUno-> cognome."</p>";
  echo "<p>".$clienteUno->getSconto()."</p>";
+$cartaGiorgio= new Carta ('Mastercard', 45637298374, 05, 2024);
+echo "<p>".'tipo carta:'. $cartaGiorgio -> tipoCarta."</p>";
+echo "<p>".'numero carta:'. $cartaGiorgio -> numeroCarta."</p>";
+echo "<p>".'scadenza:'. $cartaGiorgio -> meseScadenza.'/'.$cartaGiorgio -> annoScadenza."</p>";
+// echo "<p>".'prezzo:'. $cartaGiorgio -> annoScadenza."</p>";
 
 
 $monge = new Crocchette('crocchette monge','alimentare',50,'pollo e verdure','bio');
@@ -27,5 +33,6 @@ echo "<p>".'ingredienti:'. $monge -> ingredienti."</p>";
 echo "<p>".'bio/no bio:'.' '. $monge -> tipologia."</p>";
 var_dump($monge);
 var_dump($clienteUno);
+
 
 ?>
